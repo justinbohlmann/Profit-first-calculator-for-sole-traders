@@ -1,0 +1,5 @@
+{
+  "name": "Profit first calculator for sole traders",
+  "description": "A comprehensive calculator for sole traders to determine the gross revenue required to achieve a specific take-home income, with automatic tax calculation and intelligent allocation adjustments.",
+  "requestFramePermissions": []
+}
