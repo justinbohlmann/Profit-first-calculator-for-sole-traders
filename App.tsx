@@ -94,7 +94,8 @@ const App: React.FC = () => {
               <h2 className='text-[22px] font-bold text-[#111111] mb-4'>Your income goal</h2>
               <SliderInput
                 id='takeHome'
-                label="What's your target take-home pay after tax and expenses?"
+                label='Target take-home pay'
+                note='After tax and expenses'
                 min={0}
                 max={500000}
                 step={1000}
