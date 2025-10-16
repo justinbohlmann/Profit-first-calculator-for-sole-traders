@@ -120,7 +120,7 @@ const App: React.FC = () => {
             </DisplayCard>
 
             <DisplayCard>
-              <h2 className='text-[22px] font-bold text-[#111111] mb-1'>Target Allocation PErcentages (TAPs)</h2>
+              <h2 className='text-[22px] font-bold text-[#111111] mb-1'>Target Allocation Percentages (TAPs)</h2>
               <p className='text-sm text-[#111111] mb-4'>How do you want to allocate your 'real revenue'?</p>
 
               <div className='space-y-4'>
