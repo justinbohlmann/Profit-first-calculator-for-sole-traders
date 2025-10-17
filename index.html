@@ -1,25 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sole trader income calculator</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet" />
     <style>
       body {
         font-family: 'Source Sans Pro', sans-serif;
       }
       /* Custom slider styles to match the design system */
       .slider-track {
-        background: #F8F9FA;
+        background: #f8f9fa;
       }
       .slider-track-fill {
-        background: #00D373;
+        background: #00d373;
       }
-      input[type="range"] {
+      input[type='range'] {
         -webkit-appearance: none;
         appearance: none;
         width: 100%;
@@ -28,47 +28,38 @@
         background: #e9ecef;
         outline: none;
         opacity: 0.9;
-        -webkit-transition: .2s;
-        transition: opacity .2s;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
       }
-      input[type="range"]:hover {
+      input[type='range']:hover {
         opacity: 1;
       }
-      input[type="range"]::-webkit-slider-thumb {
+      input[type='range']::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
         width: 20px;
         height: 20px;
         border-radius: 50%;
         background: #ffffff;
-        border: 2px solid #00D373;
+        border: 2px solid #00d373;
         cursor: pointer;
       }
-      input[type="range"]::-moz-range-thumb {
+      input[type='range']::-moz-range-thumb {
         width: 20px;
         height: 20px;
         border-radius: 50%;
         background: #ffffff;
-        border: 2px solid #00D373;
+        border: 2px solid #00d373;
         cursor: pointer;
       }
-      input[type="range"]:focus::-webkit-slider-thumb {
+      input[type='range']:focus::-webkit-slider-thumb {
         box-shadow: 0 0 0 3px rgba(0, 211, 115, 0.5);
       }
-      input[type="range"]:focus::-moz-range-thumb {
+      input[type='range']:focus::-moz-range-thumb {
         box-shadow: 0 0 0 3px rgba(0, 211, 115, 0.5);
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0"
-  }
-}
-</script>
-</head>
+  </head>
   <body class="bg-[#F8F9FA]">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
