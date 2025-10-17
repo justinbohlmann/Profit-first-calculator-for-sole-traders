@@ -6,17 +6,89 @@ import { SliderInput } from './components/SliderInput';
 import { DisplayCard } from './components/DisplayCard';
 import { BreakdownItem } from './components/BreakdownItem';
 
+// Function to parse query parameters and return valid inputs
+const parseQueryParams = (): Partial<CalculatorInputs> => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const parsedInputs: Partial<CalculatorInputs> = {};
+
+  // Parse each input parameter with validation
+  const desiredTakeHome = urlParams.get('desiredTakeHome');
+  if (desiredTakeHome) {
+    const value = parseFloat(desiredTakeHome);
+    if (!isNaN(value) && value >= 0 && value <= 1000000) {
+      parsedInputs.desiredTakeHome = value;
+    }
+  }
+
+  const profitPercent = urlParams.get('profitPercent');
+  if (profitPercent) {
+    const value = parseFloat(profitPercent);
+    if (!isNaN(value) && value >= 0 && value <= 50) {
+      parsedInputs.profitPercent = value;
+    }
+  }
+
+  const ownersPayPercent = urlParams.get('ownersPayPercent');
+  if (ownersPayPercent) {
+    const value = parseFloat(ownersPayPercent);
+    if (!isNaN(value) && value >= 1 && value <= 80) {
+      parsedInputs.ownersPayPercent = value;
+    }
+  }
+
+  const contractorPay = urlParams.get('contractorPay');
+  if (contractorPay) {
+    const value = parseFloat(contractorPay);
+    if (!isNaN(value) && value >= 0 && value <= 50000) {
+      parsedInputs.contractorPay = value;
+    }
+  }
+
+  return parsedInputs;
+};
+
 const App: React.FC = () => {
-  const [inputs, setInputs] = useState<CalculatorInputs>(DEFAULT_INPUTS);
+  // Initialize inputs with query parameters if available, otherwise use defaults
+  const [inputs, setInputs] = useState<CalculatorInputs>(() => {
+    const queryParams = parseQueryParams();
+    return { ...DEFAULT_INPUTS, ...queryParams };
+  });
   const [results, setResults] = useState<CalculatedResults | null>(null);
   const [revenueView, setRevenueView] = useState<'monthly' | 'annual'>('monthly');
+  const [userHasInteracted, setUserHasInteracted] = useState(false);
 
   useEffect(() => {
     const newResults = calculateAll(inputs);
     setResults(newResults);
   }, [inputs]);
 
+  // Handle URL changes (e.g., browser back/forward, direct URL changes)
+  useEffect(() => {
+    const handleUrlChange = () => {
+      // Only update from URL if user hasn't manually interacted
+      if (!userHasInteracted) {
+        const queryParams = parseQueryParams();
+        if (Object.keys(queryParams).length > 0) {
+          setInputs((prev) => ({ ...prev, ...queryParams }));
+        }
+      }
+    };
+
+    // Listen for URL changes
+    window.addEventListener('popstate', handleUrlChange);
+    
+    // Check for initial URL params on mount
+    handleUrlChange();
+
+    return () => {
+      window.removeEventListener('popstate', handleUrlChange);
+    };
+  }, [userHasInteracted]);
+
   const handleInputChange = (field: keyof CalculatorInputs) => (value: number) => {
+    // Mark that user has manually interacted with inputs
+    setUserHasInteracted(true);
+    
     setInputs((prev) => {
       // Start with the user's intended value.
       let finalInputs = { ...prev, [field]: value };
