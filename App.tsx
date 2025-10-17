@@ -76,7 +76,7 @@ const App: React.FC = () => {
 
     // Listen for URL changes
     window.addEventListener('popstate', handleUrlChange);
-    
+
     // Check for initial URL params on mount
     handleUrlChange();
 
@@ -88,7 +88,7 @@ const App: React.FC = () => {
   const handleInputChange = (field: keyof CalculatorInputs) => (value: number) => {
     // Mark that user has manually interacted with inputs
     setUserHasInteracted(true);
-    
+
     setInputs((prev) => {
       // Start with the user's intended value.
       let finalInputs = { ...prev, [field]: value };
