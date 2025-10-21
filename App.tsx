@@ -163,7 +163,7 @@ const App: React.FC = () => {
           {/* Left Column: Inputs */}
           <div className='flex flex-col gap-6'>
             <DisplayCard>
-              <h2 className='text-[22px] font-bold text-[#111111] mb-4'>Your income goal</h2>
+              <h2 className='text-[22px] font-bold text-[#111111] mb-4 text-left-important'>Your income goal</h2>
               <SliderInput
                 id='takeHome'
                 label='Target take-home pay (annual)'
@@ -178,7 +178,7 @@ const App: React.FC = () => {
             </DisplayCard>
 
             <DisplayCard>
-              <h2 className='text-[22px] font-bold text-[#111111] mb-4'>Additional costs</h2>
+              <h2 className='text-[22px] font-bold text-[#111111] mb-4 text-left-important'>Additional costs</h2>
               <SliderInput
                 id='contractorPay'
                 label='Contractor pay (annual)'
@@ -193,8 +193,12 @@ const App: React.FC = () => {
             </DisplayCard>
 
             <DisplayCard>
-              <h2 className='text-[22px] font-bold text-[#111111] mb-1'>Target Allocation Percentages (TAPs)</h2>
-              <p className='text-sm text-[#111111] mb-4'>How do you want to allocate your 'real revenue'?</p>
+              <h2 className='text-[22px] font-bold text-[#111111] mb-1 text-left-important'>
+                Target Allocation Percentages (TAPs)
+              </h2>
+              <p className='text-sm text-[#111111] mb-4 text-left-important'>
+                How do you want to allocate your 'real revenue'?
+              </p>
 
               <div className='space-y-4'>
                 <SliderInput
@@ -224,14 +228,14 @@ const App: React.FC = () => {
                     <p className='font-normal text-[#111111]'>Tax %</p>
                     <span className='font-bold text-lg text-[#111111]'>{displayTaxPercent}%</span>
                   </div>
-                  <p className='text-xs text-[#111111] mt-1'>Calculated based on tax brackets</p>
+                  <p className='text-xs text-[#111111] mt-1 text-left-important'>Calculated based on tax brackets</p>
                 </div>
                 <div className='bg-[#F4BC42]/20 p-3 rounded-lg'>
                   <div className='flex justify-between items-center text-base'>
                     <p className='font-normal text-[#111111]'>Operating expenses %</p>
                     <span className='font-bold text-lg text-[#111111]'>{displayOpExpensesPercent}%</span>
                   </div>
-                  <p className='text-xs text-[#111111] mt-1'>Calculated as remainder</p>
+                  <p className='text-xs text-[#111111] mt-1 text-left-important'>Calculated as remainder</p>
                 </div>
               </div>
               <p className='mt-4 bg-[#00D373]/20 text-[#111111] font-bold text-center py-2 rounded-lg text-base'>
