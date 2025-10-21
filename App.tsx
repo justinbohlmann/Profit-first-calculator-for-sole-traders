@@ -159,7 +159,7 @@ const App: React.FC = () => {
           <p className='text-base text-[#111111] mt-2'>Plan your revenue to meet your financial goals.</p>
         </header>
 
-        <main className='grid grid-cols-1 md:grid-cols-2 gap-8 items-start'>
+        <main className='grid grid-cols-1 md:grid-cols-2 gap-6 items-start'>
           {/* Left Column: Inputs */}
           <div className='flex flex-col gap-6'>
             <DisplayCard>
@@ -273,11 +273,17 @@ const App: React.FC = () => {
                   : `Monthly: $${monthlyGrossRevenue.toLocaleString('en-AU')}`}
               </p>
               {isGstRegistered ? (
-                <span className='mt-4 inline-block bg-[#00D373]/80 text-white text-xs font-bold px-3 py-1 rounded-full'>
+                <span
+                  className='mt-4 inline-block bg-[#00D373]/80 text-white text-xs font-bold px-3 py-1 rounded-full'
+                  style={{ color: 'white' }}
+                >
                   GST registered
                 </span>
               ) : (
-                <span className='mt-4 inline-block bg-[#F4BC42] text-white text-xs font-bold px-3 py-1 rounded-full'>
+                <span
+                  className='mt-4 inline-block bg-[#F4BC42] text-white text-xs font-bold px-3 py-1 rounded-full'
+                  style={{ color: 'white' }}
+                >
                   No GST registration required
                 </span>
               )}
@@ -350,6 +356,7 @@ const App: React.FC = () => {
             <button
               onClick={handleReset}
               className='w-full bg-[#00D373] text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition-transform active:scale-95 transform text-base'
+              style={{ color: 'white' }}
             >
               Reset to defaults
             </button>

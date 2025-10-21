@@ -1,0 +1,508 @@
+@layer calculator {
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+}
+
+/* Add missing utility classes that aren't being generated */
+#root .mt-4 {
+  margin-top: 1rem;
+}
+#root .mt-8 {
+  margin-top: 2rem;
+}
+#root .mt-2 {
+  margin-top: 0.5rem;
+}
+#root .mb-8 {
+  margin-bottom: 2rem;
+}
+#root .mb-4 {
+  margin-bottom: 1rem;
+}
+#root .mb-2 {
+  margin-bottom: 0.5rem;
+}
+#root .mb-1 {
+  margin-bottom: 0.25rem;
+}
+#root .py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+#root .py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+#root .px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#root .py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+#root .px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+#root .text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+#root .text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+#root .text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+#root .text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+#root .text-right {
+  text-align: right;
+}
+#root .text-\[\#111111\] {
+  color: #111111;
+}
+#root .text-\[22px\] {
+  font-size: 22px;
+}
+#root .font-bold {
+  font-weight: 700;
+}
+#root .font-normal {
+  font-weight: 400;
+}
+#root .rounded-lg {
+  border-radius: 0.5rem;
+}
+#root .rounded-md {
+  border-radius: 0.375rem;
+}
+#root .w-40 {
+  width: 10rem;
+}
+#root .w-24 {
+  width: 6rem;
+}
+#root .w-20 {
+  width: 5rem;
+}
+#root .w-16 {
+  width: 4rem;
+}
+#root .h-3 {
+  height: 0.75rem;
+}
+#root .w-3 {
+  width: 0.75rem;
+}
+#root .top-8 {
+  top: 2rem;
+}
+#root .gap-4 {
+  gap: 1rem;
+}
+#root .gap-6 {
+  gap: 1.5rem;
+}
+#root .gap-3 {
+  gap: 0.75rem;
+}
+#root .space-y-4 > * + * {
+  margin-top: 1rem;
+}
+/* Grid utilities - default single column */
+#root .grid {
+  display: grid;
+}
+
+#root .grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+#root .md\:p-8 {
+  padding: 2rem;
+}
+#root .max-w-4xl {
+  max-width: 56rem;
+}
+#root .p-4 {
+  padding: 1rem;
+}
+#root .p-6 {
+  padding: 1.5rem;
+}
+#root .p-3 {
+  padding: 0.75rem;
+}
+#root .border-gray-100 {
+  border-color: #f3f4f6;
+}
+#root .border-gray-300 {
+  border-color: #d1d5db;
+}
+#root .shadow-sm {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+#root .shadow-\[0_2px_8px_rgba\(0\,0\,0\,0\.1\)\] {
+  --tw-shadow: 0 2px 8px var(--tw-shadow-color, rgba(0, 0, 0, 0.1));
+  box-shadow:
+    var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow);
+}
+#root .hover\:bg-opacity-90:hover {
+  background-color: rgba(0, 211, 115, 0.9);
+}
+#root .left-3 {
+  left: 0.75rem;
+}
+#root .right-3 {
+  right: 0.75rem;
+}
+#root .top-1\/2 {
+  top: 50%;
+}
+#root .pl-7 {
+  padding-left: 1.75rem;
+}
+#root .pr-3 {
+  padding-right: 0.75rem;
+}
+#root .pl-3 {
+  padding-left: 0.75rem;
+}
+#root .pr-7 {
+  padding-right: 1.75rem;
+}
+#root .pl-6 {
+  padding-left: 1.5rem;
+}
+#root .pr-2 {
+  padding-right: 0.5rem;
+}
+#root .pl-2 {
+  padding-left: 0.5rem;
+}
+#root .pr-6 {
+  padding-right: 1.5rem;
+}
+
+/* Fix input field widths */
+#root .w-32 {
+  width: 8rem;
+}
+#root .w-28 {
+  width: 7rem;
+}
+
+/* Button focus states are now handled by the scoped focus utilities above */
+
+/* Ensure white text on green buttons */
+#root .bg-\[\#00D373\] {
+  background-color: #00d373;
+  color: white;
+}
+
+#root .bg-\[\#00D373\]\/80 {
+  background-color: rgba(0, 211, 115, 0.8);
+  color: white;
+}
+
+/* Fix grid gaps */
+#root .grid {
+  gap: 1.5rem;
+}
+
+#root .md\:grid-cols-2 {
+  gap: 2rem;
+}
+
+/* Add missing scoped focus utilities */
+#root .focus\:border-\[\#00D373\]:focus {
+  border-color: #00d373;
+}
+
+#root .focus\:ring:focus {
+  --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width))
+    var(--tw-ring-color, currentcolor);
+  box-shadow:
+    var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+    var(--tw-shadow);
+}
+
+#root .focus\:ring-\[\#00D373\]:focus {
+  --tw-ring-color: #00d373;
+}
+
+#root .focus\:ring-opacity-50:focus {
+  --tw-ring-opacity: 0.5;
+}
+
+/* Add missing scoped utilities */
+#root .border-gray-300 {
+  border-color: #d1d5db;
+}
+
+#root .shadow-sm {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+#root .hover\:bg-opacity-90:hover {
+  background-color: rgba(0, 211, 115, 0.9);
+}
+
+#root .active\:scale-95:active {
+  --tw-scale-x: 95%;
+  --tw-scale-y: 95%;
+  --tw-scale-z: 95%;
+  scale: var(--tw-scale-x) var(--tw-scale-y);
+}
+
+#root .transform {
+  transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+}
+
+#root .transition-transform {
+  transition-property: transform, translate, scale, rotate;
+  transition-timing-function: var(--tw-ease, ease);
+  transition-duration: var(--tw-duration, 0s);
+}
+
+#root .transition-colors {
+  transition-property:
+    color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from,
+    --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, ease);
+  transition-duration: var(--tw-duration, 0s);
+}
+
+#root .last\:border-b-0:last-child {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 0;
+}
+
+#root .border-b {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+}
+
+#root .border-gray-100 {
+  border-color: #f3f4f6;
+}
+
+#root .accent-\[\#00D373\] {
+  accent-color: #00d373;
+}
+
+#root .opacity-90 {
+  opacity: 0.9;
+}
+
+#root .opacity-1 {
+  opacity: 1;
+}
+
+/* Toggle button styles */
+#root .bg-gray-200 {
+  background-color: #e5e7eb;
+}
+
+#root .text-gray-500 {
+  color: #6b7280;
+}
+
+#root .shadow {
+  box-shadow:
+    0 1px 3px 0 rgb(0 0 0 / 0.1),
+    0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Additional toggle button styles */
+#root .p-1 {
+  padding: 0.25rem;
+}
+
+#root .bg-white {
+  background-color: white;
+}
+
+/* Fix global reset styles that are missing */
+#root *,
+#root ::after,
+#root ::before {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+/* Fix button outline issues */
+#root button {
+  border: none;
+  outline: none;
+}
+
+#root button:focus {
+  outline: 2px solid #00d373;
+  outline-offset: 2px;
+}
+
+#root button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Add missing margin reset for common elements */
+#root blockquote,
+#root dd,
+#root dl,
+#root figure,
+#root h1,
+#root h2,
+#root h3,
+#root h4,
+#root h5,
+#root h6,
+#root hr,
+#root p,
+#root pre {
+  margin: 0;
+}
+
+/* Scope basic HTML elements to prevent leakage */
+#root p {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+#root h1,
+#root h2,
+#root h3,
+#root h4,
+#root h5,
+#root h6 {
+  display: block;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+#root h1 {
+  font-size: 1.5em;
+}
+
+#root h2 {
+  font-size: 1.5em;
+}
+
+#root h3 {
+  font-size: 1.17em;
+}
+
+#root h4 {
+  font-size: 1em;
+}
+
+#root h5 {
+  font-size: 0.83em;
+}
+
+#root h6 {
+  font-size: 0.67em;
+}
+
+#root button {
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#root input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+#root label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Responsive media queries - scoped to #root */
+@media (min-width: 768px) {
+  #root .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #root .md\:p-8 {
+    padding: 2rem;
+  }
+
+  #root .md\:grid-cols-2 {
+    gap: 2rem;
+  }
+}
+
+/* Preserve custom slider styles with proper scoping */
+#root .slider-track {
+  background: #f8f9fa;
+}
+
+#root .slider-track-fill {
+  background: #00d373;
+}
+
+#root input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #e9ecef;
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+#root input[type='range']:hover {
+  opacity: 1;
+}
+
+#root input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #00d373;
+  cursor: pointer;
+}
+
+#root input[type='range']::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #00d373;
+  cursor: pointer;
+}
+
+#root input[type='range']:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px rgba(0, 211, 115, 0.5);
+}
+
+#root input[type='range']:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 3px rgba(0, 211, 115, 0.5);
+}
