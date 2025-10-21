@@ -107,6 +107,10 @@ export default {
     'bg-[#CC0000]',
     'bg-[#183D33]',
     'bg-[#FF8133]',
+    // Custom alignment utilities
+    'text-left-important',
+    'text-center-important',
+    'text-right-important',
   ],
   theme: {
     extend: {
