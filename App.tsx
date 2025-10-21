@@ -154,9 +154,13 @@ const App: React.FC = () => {
   return (
     <div className='min-h-screen bg-[#F8F9FA] text-[#111111] p-4 md:p-8'>
       <div className='max-w-4xl mx-auto'>
-        <header className='text-center mb-8'>
-          <h1 className='text-[28px] font-bold text-[#111111] w-full-important'>Profit first calculator for sole traders</h1>
-          <p className='text-base text-[#111111] mt-2 w-full-important'>Plan your revenue to meet your financial goals.</p>
+        <header id="calculator-header" className='text-center mb-8'>
+          <h1 className='text-[28px] font-bold text-[#111111] w-full-important'>
+            Profit first calculator for sole traders
+          </h1>
+          <p className='text-base text-[#111111] mt-2 w-full-important'>
+            Plan your revenue to meet your financial goals.
+          </p>
         </header>
 
         <main className='grid grid-cols-1 md:grid-cols-2 gap-6 items-start'>
@@ -367,7 +371,7 @@ const App: React.FC = () => {
           </div>
         </main>
 
-        <div className='mt-8'>
+        <div id="calculator-footer" className='mt-8'>
           <DisplayCard className='w-full-important'>
             <h2 className='text-[22px] font-bold text-[#111111] mb-4 text-left-important'>How it works</h2>
             <div className='space-y-4 text-base text-[#111111] text-left-important'>
