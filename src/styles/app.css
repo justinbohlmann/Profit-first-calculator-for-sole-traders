@@ -506,3 +506,16 @@
 #root input[type='range']:focus::-moz-range-thumb {
   box-shadow: 0 0 0 3px rgba(0, 211, 115, 0.5);
 }
+
+/* Custom scoped text alignment utilities to override external CSS */
+#root .text-left-important {
+  text-align: left !important;
+}
+
+#root .text-center-important {
+  text-align: center !important;
+}
+
+#root .text-right-important {
+  text-align: right !important;
+}
