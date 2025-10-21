@@ -113,6 +113,10 @@ export default {
     'text-right-important',
     // Custom width utilities
     'w-full-important',
+    // Layout utilities for hidden sections
+    'no-header',
+    'no-footer', 
+    'compact-height',
   ],
   theme: {
     extend: {

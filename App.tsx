@@ -152,9 +152,9 @@ const App: React.FC = () => {
   const capitalizedRevenueView = revenueView.charAt(0).toUpperCase() + revenueView.slice(1);
 
   return (
-    <div className='min-h-screen bg-[#F8F9FA] text-[#111111] p-4 md:p-8'>
+    <div className='min-h-screen bg-[#F8F9FA] text-[#111111] p-4 md:p-8 compact-height'>
       <div className='max-w-4xl mx-auto'>
-        <header id="calculator-header" className='text-center mb-8'>
+        <header id='calculator-header' className='text-center mb-8'>
           <h1 className='text-[28px] font-bold text-[#111111] w-full-important'>
             Profit first calculator for sole traders
           </h1>
@@ -371,7 +371,7 @@ const App: React.FC = () => {
           </div>
         </main>
 
-        <div id="calculator-footer" className='mt-8'>
+        <div id='calculator-footer' className='mt-8'>
           <DisplayCard className='w-full-important'>
             <h2 className='text-[22px] font-bold text-[#111111] mb-4 text-left-important'>How it works</h2>
             <div className='space-y-4 text-base text-[#111111] text-left-important'>

@@ -525,3 +525,19 @@
   width: 100% !important;
   max-width: none !important;
 }
+
+/* Utilities for when header/footer are hidden */
+#root .no-header {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+#root .no-footer {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+#root .compact-height {
+  min-height: auto !important;
+  height: auto !important;
+}
