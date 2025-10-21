@@ -368,7 +368,7 @@ const App: React.FC = () => {
         </main>
 
         <div className='mt-8'>
-          <DisplayCard>
+          <DisplayCard className='w-full-important'>
             <h2 className='text-[22px] font-bold text-[#111111] mb-4 text-left-important'>How it works</h2>
             <div className='space-y-4 text-base text-[#111111] text-left-important'>
               <p className='text-left-important'>

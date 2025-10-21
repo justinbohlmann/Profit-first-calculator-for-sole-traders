@@ -519,3 +519,9 @@
 #root .text-right-important {
   text-align: right !important;
 }
+
+/* Custom scoped width utilities to override external CSS */
+#root .w-full-important {
+  width: 100% !important;
+  max-width: none !important;
+}

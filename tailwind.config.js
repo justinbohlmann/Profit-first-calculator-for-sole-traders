@@ -111,6 +111,8 @@ export default {
     'text-left-important',
     'text-center-important',
     'text-right-important',
+    // Custom width utilities
+    'w-full-important',
   ],
   theme: {
     extend: {
