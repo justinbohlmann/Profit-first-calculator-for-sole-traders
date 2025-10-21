@@ -371,25 +371,25 @@ const App: React.FC = () => {
           <DisplayCard className='w-full-important'>
             <h2 className='text-[22px] font-bold text-[#111111] mb-4 text-left-important'>How it works</h2>
             <div className='space-y-4 text-base text-[#111111] text-left-important'>
-              <p className='text-left-important'>
+              <p className='text-left-important w-full-important'>
                 This calculator starts with your desired annual take-home pay and works backward to determine the gross
                 revenue you need to generate.
               </p>
-              <p className='text-left-important'>
+              <p className='text-left-important w-full-important'>
                 <strong className='font-bold'>Real revenue</strong> is the core of the calculation. It's the money left
                 after paying any contractors and mandatory GST. This is the amount that you can actually allocate.
               </p>
-              <p className='text-left-important'>
+              <p className='text-left-important w-full-important'>
                 The <strong className='font-bold'>Revenue allocations</strong> section shows how your real revenue is
                 divided. You can set the percentage for 'Profit' and 'Owner's pay'.
               </p>
-              <p className='text-left-important'>
+              <p className='text-left-important w-full-important'>
                 The calculator automatically determines your <strong className='font-bold'>Tax</strong> based on
                 Australian tax brackets and allocates the remainder to{' '}
                 <strong className='font-bold'>Operating expenses</strong>. If you increase one allocation, others will
                 adjust to ensure the total is always 100%.
               </p>
-              <p className='text-left-important'>
+              <p className='text-left-important w-full-important'>
                 <strong className='font-bold'>GST</strong> is automatically added if your gross revenue (before GST)
                 exceeds the $75,000 threshold, ensuring your target is accurate.
               </p>
